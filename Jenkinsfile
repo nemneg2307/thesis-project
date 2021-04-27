@@ -77,7 +77,7 @@ pipeline {
         stage("deploy"){
             steps {
                 echo 'deploying the app...'
-                deploy adapters: [tomcat9(url: 'http://dev-jenkins.duckdns.org:8082',
+                deploy adapters: [tomcat9(url: 'http://dev-jenkins.duckdns.org:9999',
                                               credentialsId: 'deploy user')],
                                      war: '**/*.war',
                                      contextPath: 'war-build'
@@ -88,7 +88,7 @@ pipeline {
                     slackSend (color: '#FF0000', message: "|Deploy_| ${env.JOB_NAME}[${env.BUILD_NUMBER}] FAILED")
                 }
                 success{
-                    slackSend (color: '#008000', message: "|Deploy_| ${env.JOB_NAME}[${env.BUILD_NUMBER}] SUCCEEDED \nhttp://dev-jenkins.duckdns.org:8082/war-build/")
+                    slackSend (color: '#008000', message: "|Deploy_| ${env.JOB_NAME}[${env.BUILD_NUMBER}] SUCCEEDED \nhttp://dev-jenkins.duckdns.org:9999/war-build/")
                 }
                 unstable{
                     slackSend (color: '#FFFF00', message: "|Deploy_| ${env.JOB_NAME}[${env.BUILD_NUMBER}] UNSTABLE")
