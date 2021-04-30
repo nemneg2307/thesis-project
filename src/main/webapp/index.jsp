@@ -12,7 +12,7 @@
     <title>JSP - DevOps Proof-of-Concept</title>
 </head>
 <body>
-<h1><%= "JSP - DevOps Proof-of-Concept" %>***
+<h1><%= "JSP - DevOps Proof-of-Concept" %>
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
