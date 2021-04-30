@@ -100,7 +100,7 @@ pipeline {
                 success{
                     script {
                         if (env.BRANCH_NAME == 'main') {
-                            slackSend (color: '#008000', message: "|Deploy_| ${env.JOB_NAME}[${env.BUILD_NUMBER}] SUCCEEDED \nhttp://dev-jenkins.duckdns.org:8082/war-build/")
+                            slackSend (color: '#008000', message: "|Deploy_| ${env.JOB_NAME}[${env.BUILD_NUMBER}] SUCCEEDED \nhttp://dev-jenkins.duckdns.org:9999/war-build/")
                         }
                     }
 
