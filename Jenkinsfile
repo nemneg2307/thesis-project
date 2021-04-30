@@ -79,7 +79,7 @@ pipeline {
                 echo 'deploying the app...'
                 script {
                     if (env.BRANCH_NAME == 'main') {
-                        deploy adapters: [tomcat9(url: 'http://dev-jenkins.duckdns.org:8082',
+                        deploy adapters: [tomcat9(url: 'http://dev-jenkins.duckdns.org:9999',
                                                                       credentialsId: 'deploy user')],
                                                              war: '**/*.war',
                                                              contextPath: 'war-build'
